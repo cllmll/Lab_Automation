@@ -1,0 +1,142 @@
+[1m[36mshow_command_test***************************************************************[0m
+[0m[1m[34m* Router-01 ** changed : False *************************************************[0m
+[0m[1m[31mvvvv show_command_test ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ERROR[0m
+[0mSubtask: send_commands (failed)
+[0m
+[0m[1m[31m---- send_commands ** changed : False ------------------------------------------ ERROR[0m
+[0mTraceback (most recent call last):
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_commands.py", line 43, in send_commands
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 288, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 459, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+[0m
+[0m[1m[31m^^^^ END show_command_test ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m[1m[34m* Router-02 ** changed : False *************************************************[0m
+[0m[1m[31mvvvv show_command_test ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ERROR[0m
+[0mSubtask: send_commands (failed)
+[0m
+[0m[1m[31m---- send_commands ** changed : False ------------------------------------------ ERROR[0m
+[0mTraceback (most recent call last):
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_commands.py", line 43, in send_commands
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 288, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 459, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+[0m
+[0m[1m[31m^^^^ END show_command_test ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m[1m[34m* Router-03 ** changed : False *************************************************[0m
+[0m[1m[31mvvvv show_command_test ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ERROR[0m
+[0mSubtask: send_commands (failed)
+[0m
+[0m[1m[31m---- send_commands ** changed : False ------------------------------------------ ERROR[0m
+[0mTraceback (most recent call last):
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_commands.py", line 43, in send_commands
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 288, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 459, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+[0m
+[0m[1m[31m^^^^ END show_command_test ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m[1m[34m* Router-04 ** changed : False *************************************************[0m
+[0m[1m[31mvvvv show_command_test ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ERROR[0m
+[0mSubtask: send_commands (failed)
+[0m
+[0m[1m[31m---- send_commands ** changed : False ------------------------------------------ ERROR[0m
+[0mTraceback (most recent call last):
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_commands.py", line 43, in send_commands
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 93, in open
+    self.channel.channel_authenticate_ssh(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 223, in decorate
+    return _multiprocessing_timeout(
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 114, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 288, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/home/vmadmin/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 459, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+[0m
+[0m[1m[31m^^^^ END show_command_test ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m
